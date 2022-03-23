@@ -67,7 +67,7 @@ def has_won(board, symbol ):
             if board[col][row] == symbol and board[col+1][row-1] == symbol and board[col+2][row-2] == symbol and board[col+3][row-3] == symbol:
                 return True
     # Checking \ diagonally winning
-    for col in range(3):
+    for col in range(4):
         for row in range(3):
             if board[col][row] == symbol and board[col+1][row+1] == symbol and board[col+2][row+2] == symbol and board[col+3][row+3] == symbol:
                 return True
