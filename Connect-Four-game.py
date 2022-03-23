@@ -118,6 +118,9 @@ def play_game():
                 True
             else:
                 break
+        if has_won(my_board, symbol):
+            print(f"The {symbol}'s player has won the game")
+            break
         # Switching turn
         if symbol == "X":
             symbol = "O"
