@@ -1,6 +1,6 @@
 def fibonacci(n):
   if n < 0:
-    ValueErroe("Input 0 or greater only!")
+    print("Input 0 or greater only!")
   if n <= 1:
     return n
   list_fibs = [1,1]
