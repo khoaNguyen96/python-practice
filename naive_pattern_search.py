@@ -12,8 +12,7 @@ def pattern_search(text, pattern,replacement, case_sensitive=True):
     # To check on cases that uppercase and lowercase charector can be identify as the same
       elif not case_sensitive and pattern[char].lower() == text[index + char].lower(): 
         match_count += 1
-        num_skips += 1
-      else:
+        num_skips += 11
         break
    
     # Find the pattern 
