@@ -13,6 +13,7 @@ def pattern_search(text, pattern,replacement, case_sensitive=True):
       elif not case_sensitive and pattern[char].lower() == text[index + char].lower(): 
         match_count += 1
         num_skips += 11
+      else:
         break
    
     # Find the pattern 
