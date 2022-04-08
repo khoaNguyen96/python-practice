@@ -1,3 +1,5 @@
+from collections import deque
+
 class TreeNode:
   def __init__(self, value):
     self.value = value # data
@@ -20,3 +22,24 @@ class TreeNode:
       current_node = nodes_to_visit.pop()
       print(current_node.value)
       nodes_to_visit += current_node.children
+
+  def print_tree(root):
+    stack = deque()
+    stack.append([root, 0])
+    level_str = "\n"
+    prev_level = 0
+    level = 0
+    while len(stack) > 0:
+      prev_level = level
+      node, level = stack.pop()
+      if level > 0 and len(stack) > 0 and level <= stack[-1][1]:
+        level_str += "   "*(level-1)+ "├─"
+      elif level > 0:
+        level_str += "   "*(level-1)+ "└─"
+      level_str += str(node.value)
+      level_str += "\n"
+      level+=1
+      for child in node.children:
+        stack.append([child, level])
+
+    print(level_str)
